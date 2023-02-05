@@ -1,0 +1,553 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Catamaran', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+}
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: lightblue;
+}
+a:hover{
+  color: white;
+}
+i{
+  font-size: 24px;
+  color: white;
+}
+.active-link{
+  font-weight: 500;
+  border-bottom: 2px solid orange;
+  color: white
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+/* Navbar Section */
+.contact-nav{
+  background: #647cb0;
+  color: black;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+  padding: .5rem;
+}
+.contact-nav div{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.contact-nav a{
+  color: white;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background: #1244b1;
+  z-index: 999;
+}
+
+.nav-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0 4rem;
+}
+.nav-menu{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+.logo{
+  flex: 1;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.social-icons{
+  flex: 2;
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: white;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 0;
+  height: 550px;
+}
+.hero-wrapper{
+  position: relative;
+  text-align: center;
+}
+.hero-wrapper h1{
+  margin-top: 0;
+}
+.carousel-inner img{
+  height: 540px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.hero-wrapper .weather{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: auto;
+  width: 250px;
+  background: rgba(36, 22, 22, 0.748);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+}
+.weather img{
+  height: 100px;
+  width: 150px;
+}
+.weather h2{
+  font-size: 24px;
+  color: #F89808;
+  margin: 0;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+
+/* About and Food Section */
+.about,
+.food,
+.gallary {
+  padding: 2rem 4rem;
+}
+
+.about .wrapper,
+.food .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+}
+.about-img, .food-img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.left{
+  position: relative;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  left: -150px;
+}
+.left.show{
+  opacity: 1;
+  left: 0;
+}
+.right{
+  position: relative;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  right: -150px;
+}
+.right.show{
+  opacity: 1;
+  right: 0;
+}
+
+
+/* Rooms section */
+.rooms {
+  padding: 4rem;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  margin-top: 2rem;
+}
+.images img {
+  height: 100%;
+  width: 100%;
+}
+.room{
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: all .5s ease-in-out;
+}
+.room-info{
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  background: rgba(71, 70, 70, 0.741);
+  width: 100%;
+  color: white;
+}
+.room-info h3{
+  color: #0888ff;
+  font-weight: bold;
+}
+.room:hover{
+  transform: scale(1.05);
+}
+
+
+/* Query Section */
+.query{
+  background: url('./assets/images/street1.jpg') fixed center;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.query-wrapper{
+  height: 60%;
+  width: 60%;
+  background: rgba(255, 255, 255, 0.687);
+  backdrop-filter: blur(.4rem);
+  padding: 1rem 2rem;
+}
+.query-wrapper small{
+  font-weight: bold;
+  color: #000;
+}
+.call{
+  margin-top: 1rem;
+}
+.call i{
+  color: #0258a9;
+  margin-right: 1rem;
+}
+.call span{
+  font-size: 24px;
+  font-weight: bold;
+}
+.call span a{
+  color: #0258a9;
+}
+
+
+/* Gallary Section */
+.gallary-wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.gallary-wrapper img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  overflow: hidden; 
+  transition: all .5s ease-in-out;
+  border-radius: 10px;
+}
+.gallary-wrapper img:hover{
+  transform: scale(1.1);
+  z-index: 99;
+}
+
+/* Footer Section */
+footer{
+  background: #000;
+  color: white;
+  padding: 2rem;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+}
+footer a{
+  color: #0258a9;
+}
+.container .center, .container .right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer p{
+  text-align: center;
+}
+.follow-us{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+/* Pages styles */
+/* About */
+.about-page{
+  background: url('./assets/images/road2.jpg') fixed center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+} 
+.contact-page{
+  background: url('./assets/images/reception.jpg') fixed center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+} 
+.service-page{
+  background: url(https://img.freepik.com/free-photo/waiter-taking-order-from-woman_107420-94754.jpg?w=1060&t=st=1673749938~exp=1673750538~hmac=96724acd99dd2400c9f964c971b1ba23d3f1bbce7aa8d10a7f362c10ba5c11c8) fixed center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+} 
+.room-page{
+  background: url(https://img.freepik.com/free-photo/interior-bedroom-white-creamy-tones_181624-16134.jpg?w=1380&t=st=1673749530~exp=1673750130~hmac=cfb8cee87ad35ae1577ca031382ba379a0a2416da09d04e4d4156093c87c8e4e) fixed center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+} 
+
+.page-hero{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.overlay{
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.583);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero-content{
+  z-index: 99;
+  padding: 2rem;
+}
+.hero-content h1{
+  color: White;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+}
+.hero-content p{
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+}
+.about-page-content{
+  padding: 2rem 4rem;
+}
+.about-page-content .wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+}
+.about-page-content .wrapper img{
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Room Page */
+.room-content{
+  padding: 2rem 4rem;
+}
+.room-imgs{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.room-imgs img{
+  width: 100%;
+  height: 100%;
+}
+.room-price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.room-price h2{
+  color: #0258a9;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.price{
+  color: #03ce0d;
+  font-weight: bold;
+}
+.price span{
+  font-size: 24px;
+}
+
+/* Service Page */
+.service-list li{
+  font-weight: bold;
+}
+
+/* Contact Us Page */
+.contact-hero img{
+  height: 550px;
+  width: 100%;
+  object-fit: cover;
+}
+.contact-content{
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: scroll;
+}
+.map{
+  border: 1px solid #ccc;
+}
+
+.more-info li span{
+  color: #0258a9;
+  font-weight: 600;
+}
+.more-info .note{
+  background: rgba(240, 205, 6, 0.406);
+  padding: 1rem;
+}
+.more-info .note p{
+  color: black;
+}
+.more-info .note p span{
+  font-weight: bold;
+  color: #0258a9;
+}
+
+
+@media (max-width: 768px){
+  .contact-nav div{
+    flex-direction: column;
+  }
+  .nav-wrapper{
+    color: white;
+    padding: 0 1rem;
+  }
+  .logo{
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .hamburger{
+    display: inline-block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu{
+    position: absolute;
+    left: -100%;
+    background: #111827;
+    top: 70px;
+    gap: 0;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.3s;
+    z-index: 99;
+    padding: 1rem 0;
+  }
+  .nav-menu.active{
+    left: 0;
+  }
+
+  .hero{
+    width: 100%;
+  }
+
+  .query-wrapper{
+    width: 90%;
+    height: 80%;
+  }
+
+  .food, .about{
+    padding: 1rem;
+  }
+  .about .wrapper, .food .wrapper, .images{
+    padding: 0;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .rooms{
+    padding: 1rem;
+  }
+
+  .container{
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-page-content, .room-content{
+    padding: 2rem;
+  }
+
+  .room-imgs{
+    grid-template-columns: 1fr;
+  }
+
+  .about-page-content .wrapper{
+    grid-template-columns: 1fr;
+  }
+  .about-page-content .wrapper img{
+    height: 300px;
+  }
+
+  .contact-content{
+    padding: 2rem;
+    flex-direction: column-reverse;
+  }
+
+  .gallary-wrapper{
+    grid-template-columns: 1fr;
+  }
+}
